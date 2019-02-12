@@ -19,7 +19,7 @@ let appData = {
 //         appData.expenses[a] = b; //создали пару ключ-значение, a-b
 //     }
 //     else {
-//         i = -1;
+//         i = i-1;
 //     }
 // };
 
@@ -52,7 +52,7 @@ let appData = {
 //         appData.expenses[a] = b; //создали пару ключ-значение, a-b
 //     }
 //     else {
-//         i = -1;
+//         i = i-1;
 //     }
 //     i++;
 // }
@@ -71,7 +71,7 @@ while (i < 2) {
         appData.expenses[a] = b; //создали пару ключ-значение, a-b
     }
     else {
-        i = -1;
+        i = i - 1;
     }
     i++;
 }
