@@ -1,9 +1,9 @@
 let startBtn = document.querySelector('#start'),
 	budgetValue = document.querySelector('.budget-value'),
-	daybudgetValue = document.querySelector('.daybudget-value'),
+	dayBudgetValue = document.querySelector('.daybudget-value'),
 	levelValue = document.querySelector('.level-value'),
 	expensesValue = document.querySelector('.expenses-value'),
-	optionalexpensesValue = document.querySelector('.optionalexpenses-value'),
+	optionalExpensesValue = document.querySelector('.optionalexpenses-value'),
 	incomeValue = document.querySelector('.income-value'),
 	monthSavingsValue = document.querySelector('.monthsavings-value'),
 	yearSavingsValue = document.querySelector('.yearsavings-value'),
@@ -14,7 +14,7 @@ let startBtn = document.querySelector('#start'),
 	optionalExpensesBtn = buttons[1],
 	countBtn = buttons[2],
 
-	optionalexpensesItem = document.querySelectorAll('optionalexpenses-item'),
+	optionalExpensesItem = document.querySelectorAll('.optionalexpenses-item'),
 	incomeItem = document.querySelector('#income'),
 	checkSavings = document.querySelector('#savings'),
 	sumValue = document.querySelector('#sum'),
@@ -49,11 +49,11 @@ expensesBtn.addEventListener('click', function () {
 			console.log(111);
 			appData.expenses[a] = b; //создали пару ключ-значение, a-b
 			sum += +b;
+			expensesValue.textContent = sum;
 		} else {
 			i = i - 1;
 		}
 	}
-	expensesValue.textContent = sum;
 });
 
 let appData = {
@@ -63,9 +63,6 @@ let appData = {
 	optionalExpenses: {},
 	income: [],
 	savings: true,
-	chooseExpenses: function () {
-
-	},
 	detectDayBudget: function () {
 		appData.moneyPerDay = appData.budget / 30;
 		alert('Бюджет на 1 день ' + (appData.moneyPerDay).toFixed());
