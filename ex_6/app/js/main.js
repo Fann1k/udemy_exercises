@@ -61,6 +61,7 @@ expensesBtn.addEventListener('click', function () {
 			appData.expenses[a] = b; //создали пару ключ-значение, a-b
 			sum += +b;
 			expensesValue.textContent = sum;
+			appData.expensesSum = sum;
 		} else {
 			i = i - 1;
 		}
@@ -81,7 +82,7 @@ optionalExpensesBtn.addEventListener('click', function () {
 
 countBtn.addEventListener('click', function () {
 	if (appData.budget != undefined) {
-		appData.moneyPerDay = appData.budget / 30;
+		appData.moneyPerDay = (appData.budget - appData.expensesSum) / 30;
 		dayBudgetValue.textContent = appData.moneyPerDay.toFixed();
 
 		if (appData.moneyPerDay < 100) {
