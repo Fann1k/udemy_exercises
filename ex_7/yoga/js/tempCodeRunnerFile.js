@@ -18,5 +18,3 @@ function cs2() {
 let d = cs2();
 
 d();
-d();
-d();
