@@ -1,1 +1,1 @@
-# udeo_exercises
+# udemy_exercises
