@@ -126,8 +126,6 @@ window.addEventListener('DOMContentLoaded', function () { //java script код �
     close.addEventListener('click', function () {
         overlay.style.display = 'none';
         document.body.style.overflow = '';
-        console.log(descriptionBtn);
-        // descriptionBtn.classList.remove('more-splash');
         descriptionBtn.forEach(element => {
             element.classList.remove('more-splash');
         });
